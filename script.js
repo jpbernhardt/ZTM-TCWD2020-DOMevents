@@ -1,6 +1,7 @@
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
+var listItems = document.querySelectorAll("li");
 
 /* Creates a new list item from input, adds it to the list and
 clears the text field */
@@ -28,6 +29,15 @@ var addListAfterKeypress = (event) => {
 	}
 }
 
-button.addEventListener("click", addListAfterClick);
+var underlineToggle = (item) => {
+	item.addEventListener("click", () => {
+		item.classList.toggle("done");
+	});
+}
 
+button.addEventListener("click", addListAfterClick);
 input.addEventListener("keydown", addListAfterKeypress);
+
+listItems.forEach((item) => {
+	underlineToggle(item)
+});
