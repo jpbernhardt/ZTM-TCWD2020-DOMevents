@@ -29,7 +29,7 @@ var addListAfterKeypress = (event) => {
 	}
 }
 
-var underlineToggle = (item) => {
+var overlineToggle = (item) => {
 	item.addEventListener("click", () => {
 		item.classList.toggle("done");
 	});
@@ -39,5 +39,5 @@ button.addEventListener("click", addListAfterClick);
 input.addEventListener("keydown", addListAfterKeypress);
 
 listItems.forEach((item) => {
-	underlineToggle(item)
+	overlineToggle(item)
 });
