@@ -6,12 +6,13 @@ var btn = document.createElement("button");
 /* Creates a new list item from input, adds it to the list and
 clears the text field */
 var createListElement = () => {
-	// Creates a li element, style it and append it to ul
+	// Creates a li element and append it to ul
 	var li = document.createElement("li");
 	li.appendChild(document.createTextNode(input.value));
 	ul.appendChild(li);
 	input.value="";
 
+	// Creates the delete button and append it to the li item.
 	var deleteBtn = document.createElement("button");
 	deleteBtn.appendChild(document.createTextNode("X"));
 	li.appendChild(deleteBtn);
@@ -27,7 +28,7 @@ var createListElement = () => {
 	/* deleteBtn.onclick = function() {
 		li.parentNode.removeChild(li);
 	} */
-	
+
 };
 
 /*
@@ -39,7 +40,6 @@ var removeListItem = (listItem) => {
 		console.log("check");
   };
 };
-
 */
 
 
